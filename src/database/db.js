@@ -10,6 +10,6 @@ try {
   console.log(error);
 }
 
-const db = mongoClient.db("mywallet");
+const db = mongoClient.db("efood");
 
 export default db;
