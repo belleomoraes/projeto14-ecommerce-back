@@ -11,7 +11,10 @@ const app = express();
 app.use(cors());
 app.use(express.json()); 
 
-app.use(signinRouter);
+app.post('/signin', ()=>{
+    res.sendStatus(201);
+})
+// app.use(signinRouter);
 app.use(signupRouter); 
   
 const port = process.env.PORT || 5000;
