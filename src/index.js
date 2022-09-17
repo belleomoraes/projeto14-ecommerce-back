@@ -13,7 +13,7 @@ app.use(express.json());
 
 
 // app.use(signinRouter);
-app.use(signupRouter); 
+// app.use(signupRouter); 
 app.get('/participants', async (req, res) => {
         res.send("oi");
 });
