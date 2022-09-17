@@ -11,11 +11,12 @@ const app = express();
 app.use(cors());
 app.use(express.json()); 
 
-app.post('/signin', async (req, res) => {
-    res.sendStatus(201);
-})
+
 // app.use(signinRouter);
 app.use(signupRouter); 
+app.post('/signin', async (req, res) => {
+    res.sendStatus(201);
+});
   
 const port = process.env.PORT || 5000;
  
