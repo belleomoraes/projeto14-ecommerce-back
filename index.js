@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from 'dotenv';
 import signinRouter from "./src/routers/signin.routers.js";
 import signupRouter from "./src/routers/signup.routers.js";
+import historyRouter from "./src/routers/history.routers.js";
 
 dotenv.config()
 
@@ -13,6 +14,7 @@ app.use(express.json());
 
 app.use(signinRouter);
 app.use(signupRouter); 
+app.use(historyRouter); 
 app.get('/eu', async (req, res) => {
     res.sendStatus(201);
 })
