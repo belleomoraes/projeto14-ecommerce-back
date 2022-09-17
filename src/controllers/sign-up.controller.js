@@ -12,7 +12,7 @@ async function signUp(req, res) {
   }
 
   if (password !== confirmPassword) {
-    return res.status(400).send({ message: "A senha não confere" });
+    return res.status(404).send({ message: "A senha não confere" });
   }
 
   try {

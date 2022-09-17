@@ -5,4 +5,4 @@ import validateSignInSchema from "../middlewares/validationSignIn.middleware.js"
 const router = express.Router()
 router.post("/sign-in", validateSignInSchema, signIn);
 
-export default router
+export default router;
