@@ -14,8 +14,8 @@ app.use(express.json());
 
 // app.use(signinRouter);
 app.use(signupRouter); 
-app.post('/signin', async (req, res) => {
-    res.sendStatus(201);
+app.get('/participants', async (req, res) => {
+        res.send("oi");
 });
   
 const port = process.env.PORT || 5000;
