@@ -12,11 +12,9 @@ app.use(cors());
 app.use(express.json()); 
 
 
-// app.use(signinRouter);
-// app.use(signupRouter); 
-app.get('/participants', async (req, res) => {
-        res.send("oi");
-});
+app.use(signinRouter);
+app.use(signupRouter); 
+
   
 const port = process.env.PORT || 5000;
  
