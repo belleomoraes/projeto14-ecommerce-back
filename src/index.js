@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json()); 
 
-app.post('/signin', ()=>{
+app.post('/signin', async (req, res) => {
     res.sendStatus(201);
 })
 // app.use(signinRouter);
