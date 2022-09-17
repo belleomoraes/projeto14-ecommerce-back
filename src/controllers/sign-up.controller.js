@@ -1,4 +1,3 @@
-import joi from "joi";
 import db from "../database/db.js";
 import bcrypt from "bcrypt";
 
