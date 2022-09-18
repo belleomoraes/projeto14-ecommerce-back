@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
 import dotenv from 'dotenv';
-import signinRouter from "./src/routers/signin.routers.js";
-import signupRouter from "./src/routers/signup.routers.js";
-import historyRouter from "./src/routers/history.routers.js";
+import signinRouter from "./routers/signin.routers.js";
+import signupRouter from "./routers/signup.routers.js";
+import historyRouter from "./routers/history.routers.js";
 
 dotenv.config()
 
