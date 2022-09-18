@@ -6,9 +6,9 @@ const signinSchema = joi.object({
 });
 function validateSignInSchema(req, res, next) {
   const validation = signinSchema.validate(req.body, { abortEarly: false });
-  // if (validation.error) {
-  //   return res.status(422).send({ message: "validation.error.message" });
-  // }
+  if (validation.error) {
+     return res.status(422).send({ message: "validation.error.message" });
+  }
   next();
 }
 
