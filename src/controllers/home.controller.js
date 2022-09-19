@@ -2,9 +2,13 @@ import db from "../database/db.js";
 
 
 async function GetDb(req, res) {
-    const list = await db.collection("itemList").find().toArray();
-    console.log(list);
-    res.send(list);
+    try {
+        const list = await db.collection("itemList").find().toArray();
+        res.send(list);
+    } catch (error) {
+        res.status(500).send({ message: error.message });
+    }
+    
 }
 
 export { GetDb };
