@@ -4,11 +4,8 @@ import { v4 as uuid } from "uuid";
 
 async function signIn(req, res) {
   const { email, password } = req.body;
- 
-  console.log('vou perguntar');
+
   const isUserExists = await db.collection("user").findOne({ email });
-  console.log('perguntei');
-  console.log(isUserExists);
 
   if (!isUserExists || !bcrypt.compareSync(password, isUserExists.password)) {
     return res.status(400).send({ message: "E-mail ou senha incorretos" });
